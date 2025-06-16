@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickle Delights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      overflow-x: hidden;
+    }
+    header {
+      background-image: url('https://example.com/pickle-image.jpg'); /* Replace with your pickle image URL */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      animation: fadeIn 2s ease;
+      transition: background-color 0.5s ease;
+      transform: translateZ(0);
+      perspective: 1000px;
+    }
+    header h1 {
+      font-size: 3em;
+      animation: floatText 3s ease-in-out infinite;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #587635;
+      padding: 10px 0;
+      animation: slideDown 1s ease;
+      transition: background-color 0.5s ease;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+    }
+    nav a:hover {
+      color: #b39801;
+      transform: scale(1.1);
+    }
+    .hero {
+      background-image: url('https://example.com/hero-pickle.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2em;
+      animation: zoomIn 2s ease;
+      font-family: 'Pacifico', cursive;
+      transition: all 0.5s ease;
+      transform: translateZ(0);
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInUp 1.5s ease;
+      transition: all 0.5s ease;
+    }
+    h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5em;
+      animation: pulseFont 2s infinite;
+      transition: color 0.5s ease;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      transition: all 0.5s ease;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+    .footer {
+      background-image: url('https://example.com/pickle-image.jpg'); /* Replace with your pickle image URL */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Raleway', sans-serif;
+      transition: background-color 0.5s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulseFont {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Media query for mobile devices (2 products per line) */
+    @media (max-width: 300px) {
+      .product-card {
+        width: 45%; /* Two products per row */
+      }
+      .products {
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pickle Delights</h1>
+  <p>Taste the Tradition in Every Bite!</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <div>Delicious Homemade Pickles</div>
+</div>
+
+<section class="section" id="products">
+  <h2>Our Featured Products</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="olive.jpg" alt="Olive Pickle">
+      <h3>Olive Pickle</h3>
+      <p>Rs. 120</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="red.jpg" alt="Red Chillie Pickle">
+      <h3>Red Chillie Pickle</h3>
+      <p>Rs. 100</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="jujubee.jpg" alt="Jujube Pickle">
+      <h3>Jujube Pickle</h3>
+      <p>Rs. 110</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="tamarind.jpg" alt="Tamarind Pickle">
+      <h3>Tamarind Pickle</h3>
+      <p>Rs. 110</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="mango.jpg" alt="Mango Pickle">
+      <h3>Mango Pickle</h3>
+      <p>Rs. 130</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="carrot.jpg" alt="Carrot Pickle">
+      <h3>Carrot Pickle</h3>
+      <p>Rs. 90</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="ginger.jpg" alt="Ginger Pickle">
+      <h3>Ginger Pickle</h3>
+      <p>Rs. 120</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="lemon.jpg" alt="Lemon Pickle">
+      <h3>Lemon Pickle</h3>
+      <p>Rs. 95</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <p>We bring you pickles made using age-old recipes, fresh spices, and no preservatives. Our products are handmade with love and care in small batches to ensure the highest quality and taste.</p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: hello@pickledelights.com</p>
+  <p>Phone: +91 98765 43210</p>
+</section>
+
+<div class="footer">
+  &copy; 2025 Pickle Delights | Follow us on Instagram & Facebook
+</div>
+
+</body>
+</html>
